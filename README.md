@@ -33,11 +33,11 @@ creating two different storage objects with two different type specialisations:
    ```
    + What are the reasons for using generics here?
    
-     ** YOUR ANSWER HERE **
+     So the compiler knows what type of data each of the storage can hold. 
    
    + What are the benefits?
    
-     ** YOUR ANSWER HERE **
+     The code can be reused for different data types without boilerplate code, and prevents storing the wrong kind of objects while remaining clear.
 
 Add the following code to your `Example1` class:
 
@@ -50,9 +50,14 @@ Add the following code to your `Example1` class:
    ```
    + Compile and analyse the compiler output.
    
+    redhat.jn in thread "main" java.lang.Error: Unresolved compilation problems:                                         8Exception in thread "mThe method setItem(BankAccount) in the type Storage<BankAccount> is not applicable for the arguments (Object)
+          The method deposit(int) is undefined for the type Object
+
+          at Example1.main(Example1.java:7)
+
    + What is the cause of the problems reported by the compiler, if any?
    
-     ** YOUR ANSWER HERE **
+     The problem is because the generic is a <BankAccount> and not an object.
 
 Now replace:
 
